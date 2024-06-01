@@ -18,7 +18,7 @@ class Footer extends StatelessWidget {
               'Ak Sofa',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 10.sp,
+                fontSize: Helper.isMobile(context) ? 20 : 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -34,7 +34,7 @@ class Footer extends StatelessWidget {
                     'Contact Us',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 8.sp,
+                      fontSize: Helper.isMobile(context) ? 16 : 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -75,21 +75,21 @@ class Footer extends StatelessWidget {
                     'About',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 8.sp,
+                      fontSize: Helper.isMobile(context) ? 16 : 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(
-                    height: 5.sp,
+                    height: 2.sp,
                   ),
                   Text(
                     'AK Sofa is a premier destination for all your sofa needs, located in the heart of Hyderabad near the iconic Charminar. Our business specializes in the manufacturing and repair of a wide range of sofas, catering to diverse tastes and preferences. Whether you’re looking for a stylish sectional, a comfortable recliner, or a sleek modern loveseat, AK Sofa has something for everyone.',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 4.sp,
+                      fontSize: Helper.isMobile(context) ? 10 : 16,
                     ),
                     overflow: TextOverflow.ellipsis,
-                    maxLines: 10,
+                    maxLines: 12,
                   ),
                 ],
               ),
@@ -110,7 +110,7 @@ class DetailsRow extends StatelessWidget {
       children: [
         Icon(
           icon,
-          size: 8.sp,
+          size: 10,
           color: Colors.white,
         ),
         SizedBox(
@@ -121,7 +121,7 @@ class DetailsRow extends StatelessWidget {
           maxLines: 2,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 5.sp,
+            fontSize: Helper.isMobile(context) ? 10 : 16,
           ),
         ),
       ],

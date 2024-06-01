@@ -22,7 +22,7 @@ class BodyContainer extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 10.sp),
       child: isMobile
           ? Padding(
-              padding: EdgeInsets.only(top: 10.sp),
+              padding: EdgeInsets.only(top: 25.sp),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -38,9 +38,10 @@ class BodyContainer extends StatelessWidget {
                   Text(
                     discription,
                     overflow: TextOverflow.ellipsis,
+                    maxLines: 3,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 12.sp,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

@@ -23,7 +23,7 @@ class Header extends StatelessWidget {
             'Ak Sofa',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 10.sp,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
           ),

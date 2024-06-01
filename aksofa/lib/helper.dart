@@ -4,7 +4,7 @@ class Helper {
   static bool isMobile(BuildContext context) {
     double screenWidth = MediaQuery.sizeOf(context).width;
 
-    if (screenWidth < 800) {
+    if (screenWidth < 600) {
       return true;
     }
     return false;

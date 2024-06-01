@@ -7,7 +7,8 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(20.sp),
+      margin:
+          EdgeInsets.only(top: 10.sp, left: 10.sp, right: 10.sp, bottom: 5.sp),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50.sp),
         color: Colors.black26,

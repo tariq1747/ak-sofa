@@ -8,7 +8,7 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.amber,
+        color: Color.fromARGB(255, 103, 176, 131),
         width: Helper.screenW(context),
         padding: EdgeInsets.all(10.sp),
         child: Row(
@@ -18,7 +18,7 @@ class Footer extends StatelessWidget {
               'Ak Sofa',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 8.sp,
+                fontSize: 10.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -34,67 +34,40 @@ class Footer extends StatelessWidget {
                     'Contact Us',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 6.sp,
+                      fontSize: 8.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(
-                    height: 5.sp,
+                    height: 2.sp,
                   ),
-                  ListTile(
-                    horizontalTitleGap: 2.sp,
-                    contentPadding: const EdgeInsets.all(0),
-                    leading: Icon(
-                      Icons.phone,
-                      size: 8.sp,
-                    ),
-                    title: Text(
-                      '+91 888889988898',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 6.sp,
-                      ),
-                    ),
+                  const DetailsRow(
+                    icon: Icons.phone,
+                    text: '+91 8978310726',
                   ),
-                  ListTile(
-                    horizontalTitleGap: 2.sp,
-                    contentPadding: const EdgeInsets.all(0),
-                    leading: Icon(
-                      Icons.mail,
-                      size: 8.sp,
-                    ),
-                    title: Text(
-                      'fjasdhkja@gmail.com',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 6.sp,
-                      ),
-                    ),
+                  SizedBox(
+                    height: 2.sp,
                   ),
-                  ListTile(
-                    horizontalTitleGap: 2.sp,
-                    contentPadding: const EdgeInsets.all(0),
-                    leading: Icon(
-                      Icons.home,
-                      size: 8.sp,
-                    ),
-                    title: Text(
-                      'hhydrabad',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 6.sp,
-                      ),
-                    ),
+                  const DetailsRow(
+                    icon: Icons.mail,
+                    text: 'aksofa@gmail.com',
+                  ),
+                  SizedBox(
+                    height: 2.sp,
+                  ),
+                  const DetailsRow(
+                    icon: Icons.location_city,
+                    text: 'Hyderabad, Telangana',
                   ),
                 ],
               ),
             ),
             SizedBox(
-              width: 10.sp,
+              width: 20.sp,
             ),
             ConstrainedBox(
               constraints:
-                  BoxConstraints(maxWidth: Helper.screenW(context) * 0.3),
+                  BoxConstraints(maxWidth: Helper.screenW(context) * 0.4),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -102,7 +75,7 @@ class Footer extends StatelessWidget {
                     'About',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 6.sp,
+                      fontSize: 8.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -110,18 +83,48 @@ class Footer extends StatelessWidget {
                     height: 5.sp,
                   ),
                   Text(
-                    'shfdgjhdfdsgfhshghdjhdsfhfjsjfdshfhsdkjfjdshfsdhfjhdsfjwhefhjewhfewhfjhewjfhjewhfhewjfhjewfwejhfjwhefjewwwwwwhkjewfjwejfhjwefjhwekjfkjwfeewfhewjfwwjwkujduehfhhiwhnfjwnjehfnjwhefwj',
+                    'AK Sofa is a premier destination for all your sofa needs, located in the heart of Hyderabad near the iconic Charminar. Our business specializes in the manufacturing and repair of a wide range of sofas, catering to diverse tastes and preferences. Whether you’re looking for a stylish sectional, a comfortable recliner, or a sleek modern loveseat, AK Sofa has something for everyone.',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 6.sp,
+                      fontSize: 4.sp,
                     ),
                     overflow: TextOverflow.ellipsis,
-                    maxLines: 5,
+                    maxLines: 10,
                   ),
                 ],
               ),
             ),
           ],
         ));
+  }
+}
+
+class DetailsRow extends StatelessWidget {
+  const DetailsRow({super.key, this.icon, required this.text});
+  final IconData? icon;
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(
+          icon,
+          size: 8.sp,
+          color: Colors.white,
+        ),
+        SizedBox(
+          width: 2.sp,
+        ),
+        Text(
+          text,
+          maxLines: 2,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 5.sp,
+          ),
+        ),
+      ],
+    );
   }
 }
